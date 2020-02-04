@@ -1,0 +1,856 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06A62C6898A90CA7FD76C94B41A4560A /* JLFloatingPanelSurfaceView.h in Headers */ = {isa = PBXBuildFile; fileRef = D59AA843137926A6406E5D3850049D94 /* JLFloatingPanelSurfaceView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06F92A2FBAF41AB231407908A6FFCC8D /* JLFloatingPanel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A4EB1B333E2C8A0FFCFC255726BA16CA /* JLFloatingPanel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1264554D0B3D277E076EB62AC632A6D9 /* JLFloatingPanelPassThroughView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C61380B23CBBAA7550BF81102510FB /* JLFloatingPanelPassThroughView.m */; };
+		1DBA55E23DE4A61684E06359B960255E /* UIVIewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D57213685E6B03ACCED65D33945152 /* UIVIewExtension.m */; };
+		39EB6DBB9D643A1A145626652864CBEC /* JLFloatingPanelPassThroughView.h in Headers */ = {isa = PBXBuildFile; fileRef = A999E3AA2678F3A3E68407FF444C9956 /* JLFloatingPanelPassThroughView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		474BF22B9518CBFE467D0147CBF3DFD2 /* JLGrabberHandleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 12C9E2687A40C90AEB25CD6AFD76893A /* JLGrabberHandleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AABC77D7D64E531B9A0BFCD9207918A /* JLFloatingPanelLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BD4370CA65163E3E1BC4FAB4C4E58CD /* JLFloatingPanelLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B945DAB1D609C6D9CEB92B47DAEFE05 /* JLFloatingPanelCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D26C0A91D08C65DE0B1BDAF1E44C655 /* JLFloatingPanelCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5621FA9C25B60E8FBAA24D70557E2E88 /* JLFloatingPanelBackdropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF675E363A21AEAE0B24076CFE5FB25 /* JLFloatingPanelBackdropView.m */; };
+		5CDCFC328DA3A4541531A8EE2B0D8B14 /* JLFloatingPanelCore.m in Sources */ = {isa = PBXBuildFile; fileRef = D96D22B9C80D4154F6CAB83AD29829EB /* JLFloatingPanelCore.m */; };
+		6F1085E073B2E3919E0A82A75BCA184B /* UIVIewExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 33DD0E2561999265F0290A8F4E7B0515 /* UIVIewExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C183C4363B0FA1BE1876919733C5029 /* JLFloatingPanelPosition.h in Headers */ = {isa = PBXBuildFile; fileRef = 4713983961D57924C4001B0985BF6188 /* JLFloatingPanelPosition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E1A9EB5E1488E6A2274B788E077D82F /* JLFloatingPanelTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = A75E20A73061F44435440E3589D52CA1 /* JLFloatingPanelTransitioning.m */; };
+		80842D9088AB7ED6AA9FD9D845B20634 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		8BB48A7C8EDAD24E562FE8B8444A1413 /* JLGrabberHandleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DCF41AC037843CAB47F072D0F70AF2 /* JLGrabberHandleView.m */; };
+		940477187AFCF91F9CCB673D70F0618C /* JLFloatingPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C594913EDA698B92A9389A47295F1 /* JLFloatingPanelController.m */; };
+		9D5E27469F48EE2DADDA302FCD6665C1 /* JLFloatingPanelSurfaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 834F144B5EC3471ACBA66D60B67542B8 /* JLFloatingPanelSurfaceView.m */; };
+		9E7DBC7E346F93A6F0C5E7388DF0D4E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		B52EDB8BDC19551F63815CB938CD582E /* Pods-JLFloatingPanel_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E4258089AF916AA7F245AA170542569D /* Pods-JLFloatingPanel_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6B2269419E3D495D8F234A64C58F70C /* JLFloatingPanelController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C5986018A031AB486C1D9D9413FCE4C /* JLFloatingPanelController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BFC81BAF44060B3FEB6EEAAB21F946D8 /* JLFloatingPanelLayoutProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = CCAAD3D016DF9D6EBAFF97EC72620F24 /* JLFloatingPanelLayoutProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C6896EBC86A940340809EEC251B052F1 /* JLFloatingPanelPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1A877B9CA0B4D2D13E7E383ADEB /* JLFloatingPanelPosition.m */; };
+		C73085D5A78DD644857327ADFBA7FD9F /* JLFloatingPanelBackdropView.h in Headers */ = {isa = PBXBuildFile; fileRef = C1874826D74BC072251886A02090A2D2 /* JLFloatingPanelBackdropView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF2487E25AE2F879CF2942F8D6DE6AE5 /* Pods-JLFloatingPanel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FEFD064FC906698F4A940F240294244 /* Pods-JLFloatingPanel_Example-dummy.m */; };
+		D20A3E8E1C2C1DF86A59BED4C2F99B9C /* JLFloatingPanelTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E4AD111A2059B6BFF1E7CCFF18EF493 /* JLFloatingPanelTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5432896D5DD48283F86C2E3341BA8FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		D66ECE907DBE1DF605A746E7A7592226 /* Pods-JLFloatingPanel_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FB745A61AD9FD105C5D82F31274D8151 /* Pods-JLFloatingPanel_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6EF19FAC7FFE7C3ECCBFFC3252D9D05 /* JLFloatingPanelBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = AF057A6779FC00484E054804FC60DF2F /* JLFloatingPanelBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E66951C7DBC28F988A3BE934511E7249 /* Pods-JLFloatingPanel_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A36C86249688E2AD4AAF532EF35129 /* Pods-JLFloatingPanel_Tests-dummy.m */; };
+		EE77A398603F95E571CCAC065DAA25CA /* JLFloatingPanelLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A847EDC8CF82773A37EF2B231F5046 /* JLFloatingPanelLayout.m */; };
+		EF1317ABB81612DC336A7951EE8D8B35 /* JLFloatingPanel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CACBB40AD1F72623368820C1EAAF05 /* JLFloatingPanel-dummy.m */; };
+		EFA88C44A546902BFDC8CFD6F4A9AA6C /* JLFloatingPanelBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 603D383089AFC69A3CFA6052845D86DA /* JLFloatingPanelBehavior.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D09DE0991BBAD4AF6131371BFEB0556 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71C8773C39F15F95D3CFFF66E112B929;
+			remoteInfo = JLFloatingPanel;
+		};
+		C549D2DAC80301040278E2831755F539 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFE36FA66DF4FED1A8563B822C586467;
+			remoteInfo = "Pods-JLFloatingPanel_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		029DC3CB497C39C8A4EA677E1C60C19E /* Pods-JLFloatingPanel_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JLFloatingPanel_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		035486C5C6ACA74421BBD50034CBEBE9 /* Pods-JLFloatingPanel_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JLFloatingPanel_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		0710ADEC6058D6840079C5F3E9ED3879 /* Pods-JLFloatingPanel_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JLFloatingPanel_Tests-Info.plist"; sourceTree = "<group>"; };
+		0AF9C1A877B9CA0B4D2D13E7E383ADEB /* JLFloatingPanelPosition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLFloatingPanelPosition.m; path = JLFloatingPanel/Classes/JLFloatingPanelPosition.m; sourceTree = "<group>"; };
+		0B8FA6620F49FB2A418D9AE0AD042BE1 /* Pods-JLFloatingPanel_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JLFloatingPanel_Tests.modulemap"; sourceTree = "<group>"; };
+		12C9E2687A40C90AEB25CD6AFD76893A /* JLGrabberHandleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLGrabberHandleView.h; path = JLFloatingPanel/Classes/JLGrabberHandleView.h; sourceTree = "<group>"; };
+		152B2B27612A8D73E01080A7EEC41332 /* Pods-JLFloatingPanel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JLFloatingPanel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		2BACF0A5BC7D8E415C9A72ED90803CBF /* Pods-JLFloatingPanel_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JLFloatingPanel_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2CF675E363A21AEAE0B24076CFE5FB25 /* JLFloatingPanelBackdropView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLFloatingPanelBackdropView.m; path = JLFloatingPanel/Classes/JLFloatingPanelBackdropView.m; sourceTree = "<group>"; };
+		2FEFD064FC906698F4A940F240294244 /* Pods-JLFloatingPanel_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JLFloatingPanel_Example-dummy.m"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		33DD0E2561999265F0290A8F4E7B0515 /* UIVIewExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UIVIewExtension.h; path = JLFloatingPanel/Classes/UIVIewExtension.h; sourceTree = "<group>"; };
+		45C61380B23CBBAA7550BF81102510FB /* JLFloatingPanelPassThroughView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLFloatingPanelPassThroughView.m; path = JLFloatingPanel/Classes/JLFloatingPanelPassThroughView.m; sourceTree = "<group>"; };
+		4713983961D57924C4001B0985BF6188 /* JLFloatingPanelPosition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLFloatingPanelPosition.h; path = JLFloatingPanel/Classes/JLFloatingPanelPosition.h; sourceTree = "<group>"; };
+		5854C757171FDD0C7BD0DB87D4721B57 /* JLFloatingPanel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JLFloatingPanel.xcconfig; sourceTree = "<group>"; };
+		603D383089AFC69A3CFA6052845D86DA /* JLFloatingPanelBehavior.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLFloatingPanelBehavior.m; path = JLFloatingPanel/Classes/JLFloatingPanelBehavior.m; sourceTree = "<group>"; };
+		63072A0AC9D3D6BA77AE0141B7221551 /* Pods-JLFloatingPanel_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JLFloatingPanel_Example-frameworks.sh"; sourceTree = "<group>"; };
+		690C594913EDA698B92A9389A47295F1 /* JLFloatingPanelController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLFloatingPanelController.m; path = JLFloatingPanel/Classes/JLFloatingPanelController.m; sourceTree = "<group>"; };
+		73DCF41AC037843CAB47F072D0F70AF2 /* JLGrabberHandleView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLGrabberHandleView.m; path = JLFloatingPanel/Classes/JLGrabberHandleView.m; sourceTree = "<group>"; };
+		7BD4370CA65163E3E1BC4FAB4C4E58CD /* JLFloatingPanelLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLFloatingPanelLayout.h; path = JLFloatingPanel/Classes/JLFloatingPanelLayout.h; sourceTree = "<group>"; };
+		7C5986018A031AB486C1D9D9413FCE4C /* JLFloatingPanelController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLFloatingPanelController.h; path = JLFloatingPanel/Classes/JLFloatingPanelController.h; sourceTree = "<group>"; };
+		7D0821CE5FAF951E6497EF94F9C26208 /* JLFloatingPanel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JLFloatingPanel-prefix.pch"; sourceTree = "<group>"; };
+		7E4AD111A2059B6BFF1E7CCFF18EF493 /* JLFloatingPanelTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLFloatingPanelTransitioning.h; path = JLFloatingPanel/Classes/JLFloatingPanelTransitioning.h; sourceTree = "<group>"; };
+		80E9FDC0BC139C339559101026167B73 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		834F144B5EC3471ACBA66D60B67542B8 /* JLFloatingPanelSurfaceView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLFloatingPanelSurfaceView.m; path = JLFloatingPanel/Classes/JLFloatingPanelSurfaceView.m; sourceTree = "<group>"; };
+		9509A5E0C825B55FA77B23C989151A84 /* Pods-JLFloatingPanel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JLFloatingPanel_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		9825E58DE84E9220EABD81187149C1EF /* JLFloatingPanel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JLFloatingPanel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D26C0A91D08C65DE0B1BDAF1E44C655 /* JLFloatingPanelCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLFloatingPanelCore.h; path = JLFloatingPanel/Classes/JLFloatingPanelCore.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DF4023A5FDBBE2A7BB4310CDD69BF22 /* Pods-JLFloatingPanel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JLFloatingPanel_Example.release.xcconfig"; sourceTree = "<group>"; };
+		9E194C41A18BE0B078EDA5BA0AF8BF2C /* JLFloatingPanel.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = JLFloatingPanel.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		A2128CDB835BAFD6EF41B7470C2D5EC8 /* Pods-JLFloatingPanel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JLFloatingPanel_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A4EB1B333E2C8A0FFCFC255726BA16CA /* JLFloatingPanel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JLFloatingPanel-umbrella.h"; sourceTree = "<group>"; };
+		A75E20A73061F44435440E3589D52CA1 /* JLFloatingPanelTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLFloatingPanelTransitioning.m; path = JLFloatingPanel/Classes/JLFloatingPanelTransitioning.m; sourceTree = "<group>"; };
+		A999E3AA2678F3A3E68407FF444C9956 /* JLFloatingPanelPassThroughView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLFloatingPanelPassThroughView.h; path = JLFloatingPanel/Classes/JLFloatingPanelPassThroughView.h; sourceTree = "<group>"; };
+		AD6859DA7A59904D41C56C873EF82765 /* Pods_JLFloatingPanel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JLFloatingPanel_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF057A6779FC00484E054804FC60DF2F /* JLFloatingPanelBehavior.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLFloatingPanelBehavior.h; path = JLFloatingPanel/Classes/JLFloatingPanelBehavior.h; sourceTree = "<group>"; };
+		B0362F70A035C4BF079D5D35202B57D2 /* Pods_JLFloatingPanel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JLFloatingPanel_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2F00219BF4A022A4F7A4C7AF65FB835 /* Pods-JLFloatingPanel_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JLFloatingPanel_Example-Info.plist"; sourceTree = "<group>"; };
+		B392A5CC195B6F26DBA006DA37F901A8 /* Pods-JLFloatingPanel_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JLFloatingPanel_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		B4A847EDC8CF82773A37EF2B231F5046 /* JLFloatingPanelLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLFloatingPanelLayout.m; path = JLFloatingPanel/Classes/JLFloatingPanelLayout.m; sourceTree = "<group>"; };
+		C1874826D74BC072251886A02090A2D2 /* JLFloatingPanelBackdropView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLFloatingPanelBackdropView.h; path = JLFloatingPanel/Classes/JLFloatingPanelBackdropView.h; sourceTree = "<group>"; };
+		C5D57213685E6B03ACCED65D33945152 /* UIVIewExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UIVIewExtension.m; path = JLFloatingPanel/Classes/UIVIewExtension.m; sourceTree = "<group>"; };
+		C9655DCF9E6F3C1C02A4D10D74C1CA0B /* Pods-JLFloatingPanel_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JLFloatingPanel_Example.modulemap"; sourceTree = "<group>"; };
+		CCAAD3D016DF9D6EBAFF97EC72620F24 /* JLFloatingPanelLayoutProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLFloatingPanelLayoutProtocol.h; path = JLFloatingPanel/Classes/JLFloatingPanelLayoutProtocol.h; sourceTree = "<group>"; };
+		D0EC68C14FA8BB2C6484EA40DA08B34A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D59AA843137926A6406E5D3850049D94 /* JLFloatingPanelSurfaceView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLFloatingPanelSurfaceView.h; path = JLFloatingPanel/Classes/JLFloatingPanelSurfaceView.h; sourceTree = "<group>"; };
+		D96D22B9C80D4154F6CAB83AD29829EB /* JLFloatingPanelCore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLFloatingPanelCore.m; path = JLFloatingPanel/Classes/JLFloatingPanelCore.m; sourceTree = "<group>"; };
+		D9CACBB40AD1F72623368820C1EAAF05 /* JLFloatingPanel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JLFloatingPanel-dummy.m"; sourceTree = "<group>"; };
+		E4258089AF916AA7F245AA170542569D /* Pods-JLFloatingPanel_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JLFloatingPanel_Example-umbrella.h"; sourceTree = "<group>"; };
+		F0F567B7D44B918677EFC24873178CD7 /* JLFloatingPanel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JLFloatingPanel.modulemap; sourceTree = "<group>"; };
+		F2A36C86249688E2AD4AAF532EF35129 /* Pods-JLFloatingPanel_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JLFloatingPanel_Tests-dummy.m"; sourceTree = "<group>"; };
+		FB745A61AD9FD105C5D82F31274D8151 /* Pods-JLFloatingPanel_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JLFloatingPanel_Tests-umbrella.h"; sourceTree = "<group>"; };
+		FD754927E48B64A9EF19148D0C761038 /* JLFloatingPanel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JLFloatingPanel-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4340C7D0FB6608EA7F88D065A70473C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80842D9088AB7ED6AA9FD9D845B20634 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B835B6D5C982C20E39E8FDCE3E38E8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5432896D5DD48283F86C2E3341BA8FC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5667CDA1EB588477507E64CE5CBBC5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E7DBC7E346F93A6F0C5E7388DF0D4E7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1151056514CBB3437619D92381513F62 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0F567B7D44B918677EFC24873178CD7 /* JLFloatingPanel.modulemap */,
+				5854C757171FDD0C7BD0DB87D4721B57 /* JLFloatingPanel.xcconfig */,
+				D9CACBB40AD1F72623368820C1EAAF05 /* JLFloatingPanel-dummy.m */,
+				FD754927E48B64A9EF19148D0C761038 /* JLFloatingPanel-Info.plist */,
+				7D0821CE5FAF951E6497EF94F9C26208 /* JLFloatingPanel-prefix.pch */,
+				A4EB1B333E2C8A0FFCFC255726BA16CA /* JLFloatingPanel-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/JLFloatingPanel";
+			sourceTree = "<group>";
+		};
+		17913F33680E5940480C513F99CB2FF9 /* Pods-JLFloatingPanel_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0B8FA6620F49FB2A418D9AE0AD042BE1 /* Pods-JLFloatingPanel_Tests.modulemap */,
+				2BACF0A5BC7D8E415C9A72ED90803CBF /* Pods-JLFloatingPanel_Tests-acknowledgements.markdown */,
+				035486C5C6ACA74421BBD50034CBEBE9 /* Pods-JLFloatingPanel_Tests-acknowledgements.plist */,
+				F2A36C86249688E2AD4AAF532EF35129 /* Pods-JLFloatingPanel_Tests-dummy.m */,
+				0710ADEC6058D6840079C5F3E9ED3879 /* Pods-JLFloatingPanel_Tests-Info.plist */,
+				FB745A61AD9FD105C5D82F31274D8151 /* Pods-JLFloatingPanel_Tests-umbrella.h */,
+				152B2B27612A8D73E01080A7EEC41332 /* Pods-JLFloatingPanel_Tests.debug.xcconfig */,
+				A2128CDB835BAFD6EF41B7470C2D5EC8 /* Pods-JLFloatingPanel_Tests.release.xcconfig */,
+			);
+			name = "Pods-JLFloatingPanel_Tests";
+			path = "Target Support Files/Pods-JLFloatingPanel_Tests";
+			sourceTree = "<group>";
+		};
+		20A8EA7072F50BD2DA2C17BD25DAA296 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9825E58DE84E9220EABD81187149C1EF /* JLFloatingPanel.framework */,
+				B0362F70A035C4BF079D5D35202B57D2 /* Pods_JLFloatingPanel_Example.framework */,
+				AD6859DA7A59904D41C56C873EF82765 /* Pods_JLFloatingPanel_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48A58DE084C685C12700FC3C87D110EA /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				9E194C41A18BE0B078EDA5BA0AF8BF2C /* JLFloatingPanel.podspec */,
+				D0EC68C14FA8BB2C6484EA40DA08B34A /* LICENSE */,
+				80E9FDC0BC139C339559101026167B73 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		702F02F27C52587362737DECD49F7CCA /* JLFloatingPanel */ = {
+			isa = PBXGroup;
+			children = (
+				C1874826D74BC072251886A02090A2D2 /* JLFloatingPanelBackdropView.h */,
+				2CF675E363A21AEAE0B24076CFE5FB25 /* JLFloatingPanelBackdropView.m */,
+				AF057A6779FC00484E054804FC60DF2F /* JLFloatingPanelBehavior.h */,
+				603D383089AFC69A3CFA6052845D86DA /* JLFloatingPanelBehavior.m */,
+				7C5986018A031AB486C1D9D9413FCE4C /* JLFloatingPanelController.h */,
+				690C594913EDA698B92A9389A47295F1 /* JLFloatingPanelController.m */,
+				9D26C0A91D08C65DE0B1BDAF1E44C655 /* JLFloatingPanelCore.h */,
+				D96D22B9C80D4154F6CAB83AD29829EB /* JLFloatingPanelCore.m */,
+				7BD4370CA65163E3E1BC4FAB4C4E58CD /* JLFloatingPanelLayout.h */,
+				B4A847EDC8CF82773A37EF2B231F5046 /* JLFloatingPanelLayout.m */,
+				CCAAD3D016DF9D6EBAFF97EC72620F24 /* JLFloatingPanelLayoutProtocol.h */,
+				A999E3AA2678F3A3E68407FF444C9956 /* JLFloatingPanelPassThroughView.h */,
+				45C61380B23CBBAA7550BF81102510FB /* JLFloatingPanelPassThroughView.m */,
+				4713983961D57924C4001B0985BF6188 /* JLFloatingPanelPosition.h */,
+				0AF9C1A877B9CA0B4D2D13E7E383ADEB /* JLFloatingPanelPosition.m */,
+				D59AA843137926A6406E5D3850049D94 /* JLFloatingPanelSurfaceView.h */,
+				834F144B5EC3471ACBA66D60B67542B8 /* JLFloatingPanelSurfaceView.m */,
+				7E4AD111A2059B6BFF1E7CCFF18EF493 /* JLFloatingPanelTransitioning.h */,
+				A75E20A73061F44435440E3589D52CA1 /* JLFloatingPanelTransitioning.m */,
+				12C9E2687A40C90AEB25CD6AFD76893A /* JLGrabberHandleView.h */,
+				73DCF41AC037843CAB47F072D0F70AF2 /* JLGrabberHandleView.m */,
+				33DD0E2561999265F0290A8F4E7B0515 /* UIVIewExtension.h */,
+				C5D57213685E6B03ACCED65D33945152 /* UIVIewExtension.m */,
+				48A58DE084C685C12700FC3C87D110EA /* Pod */,
+				1151056514CBB3437619D92381513F62 /* Support Files */,
+			);
+			name = JLFloatingPanel;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		907F41CF58353C24940DE5A52E9E0D3C /* Pods-JLFloatingPanel_Example */ = {
+			isa = PBXGroup;
+			children = (
+				C9655DCF9E6F3C1C02A4D10D74C1CA0B /* Pods-JLFloatingPanel_Example.modulemap */,
+				029DC3CB497C39C8A4EA677E1C60C19E /* Pods-JLFloatingPanel_Example-acknowledgements.markdown */,
+				B392A5CC195B6F26DBA006DA37F901A8 /* Pods-JLFloatingPanel_Example-acknowledgements.plist */,
+				2FEFD064FC906698F4A940F240294244 /* Pods-JLFloatingPanel_Example-dummy.m */,
+				63072A0AC9D3D6BA77AE0141B7221551 /* Pods-JLFloatingPanel_Example-frameworks.sh */,
+				B2F00219BF4A022A4F7A4C7AF65FB835 /* Pods-JLFloatingPanel_Example-Info.plist */,
+				E4258089AF916AA7F245AA170542569D /* Pods-JLFloatingPanel_Example-umbrella.h */,
+				9509A5E0C825B55FA77B23C989151A84 /* Pods-JLFloatingPanel_Example.debug.xcconfig */,
+				9DF4023A5FDBBE2A7BB4310CDD69BF22 /* Pods-JLFloatingPanel_Example.release.xcconfig */,
+			);
+			name = "Pods-JLFloatingPanel_Example";
+			path = "Target Support Files/Pods-JLFloatingPanel_Example";
+			sourceTree = "<group>";
+		};
+		BD3F9E1B2A14D00FB7AF2E189B9FF4A0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				907F41CF58353C24940DE5A52E9E0D3C /* Pods-JLFloatingPanel_Example */,
+				17913F33680E5940480C513F99CB2FF9 /* Pods-JLFloatingPanel_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				DC670D9B8291BB6071879B36AA70844C /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				20A8EA7072F50BD2DA2C17BD25DAA296 /* Products */,
+				BD3F9E1B2A14D00FB7AF2E189B9FF4A0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC670D9B8291BB6071879B36AA70844C /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				702F02F27C52587362737DECD49F7CCA /* JLFloatingPanel */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		09F17CE5FB4B704FECC700213957B362 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F92A2FBAF41AB231407908A6FFCC8D /* JLFloatingPanel-umbrella.h in Headers */,
+				C73085D5A78DD644857327ADFBA7FD9F /* JLFloatingPanelBackdropView.h in Headers */,
+				D6EF19FAC7FFE7C3ECCBFFC3252D9D05 /* JLFloatingPanelBehavior.h in Headers */,
+				B6B2269419E3D495D8F234A64C58F70C /* JLFloatingPanelController.h in Headers */,
+				4B945DAB1D609C6D9CEB92B47DAEFE05 /* JLFloatingPanelCore.h in Headers */,
+				4AABC77D7D64E531B9A0BFCD9207918A /* JLFloatingPanelLayout.h in Headers */,
+				BFC81BAF44060B3FEB6EEAAB21F946D8 /* JLFloatingPanelLayoutProtocol.h in Headers */,
+				39EB6DBB9D643A1A145626652864CBEC /* JLFloatingPanelPassThroughView.h in Headers */,
+				7C183C4363B0FA1BE1876919733C5029 /* JLFloatingPanelPosition.h in Headers */,
+				06A62C6898A90CA7FD76C94B41A4560A /* JLFloatingPanelSurfaceView.h in Headers */,
+				D20A3E8E1C2C1DF86A59BED4C2F99B9C /* JLFloatingPanelTransitioning.h in Headers */,
+				474BF22B9518CBFE467D0147CBF3DFD2 /* JLGrabberHandleView.h in Headers */,
+				6F1085E073B2E3919E0A82A75BCA184B /* UIVIewExtension.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A7ABF401970AACF952EBD50FCA2D092 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D66ECE907DBE1DF605A746E7A7592226 /* Pods-JLFloatingPanel_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F8CCE8B48C8AB46D59F1C127F733FA9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B52EDB8BDC19551F63815CB938CD582E /* Pods-JLFloatingPanel_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		71C8773C39F15F95D3CFFF66E112B929 /* JLFloatingPanel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD0E1516B77B3B22AED889C31A47C651 /* Build configuration list for PBXNativeTarget "JLFloatingPanel" */;
+			buildPhases = (
+				09F17CE5FB4B704FECC700213957B362 /* Headers */,
+				A76BB9345E4C4A8A970E8590404C1D7E /* Sources */,
+				4340C7D0FB6608EA7F88D065A70473C7 /* Frameworks */,
+				09199C8F4492B04B952FCED32D36FBFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JLFloatingPanel;
+			productName = JLFloatingPanel;
+			productReference = 9825E58DE84E9220EABD81187149C1EF /* JLFloatingPanel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A77F3376E0932C1079F5FD21E56C01D4 /* Pods-JLFloatingPanel_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D5B5E84DD089F8AAB6C67D35733F752 /* Build configuration list for PBXNativeTarget "Pods-JLFloatingPanel_Tests" */;
+			buildPhases = (
+				8A7ABF401970AACF952EBD50FCA2D092 /* Headers */,
+				83E91AB419A344141A20DB7526614298 /* Sources */,
+				9B835B6D5C982C20E39E8FDCE3E38E8B /* Frameworks */,
+				6972A6E2404D55C4F9FE5007D948B2E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3F43973A8D8D9FA053DBC5E0ED42756 /* PBXTargetDependency */,
+			);
+			name = "Pods-JLFloatingPanel_Tests";
+			productName = "Pods-JLFloatingPanel_Tests";
+			productReference = AD6859DA7A59904D41C56C873EF82765 /* Pods_JLFloatingPanel_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CFE36FA66DF4FED1A8563B822C586467 /* Pods-JLFloatingPanel_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72F2EC9966221770F808286CDB230586 /* Build configuration list for PBXNativeTarget "Pods-JLFloatingPanel_Example" */;
+			buildPhases = (
+				9F8CCE8B48C8AB46D59F1C127F733FA9 /* Headers */,
+				BEC8730E6D3DC12F9C6303AF9D84D6FD /* Sources */,
+				C5667CDA1EB588477507E64CE5CBBC5D /* Frameworks */,
+				EF9AADE48EF2977074EFD978C5342897 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0F1CC8BB8BA66B9626D8F955BD3FBC9 /* PBXTargetDependency */,
+			);
+			name = "Pods-JLFloatingPanel_Example";
+			productName = "Pods-JLFloatingPanel_Example";
+			productReference = B0362F70A035C4BF079D5D35202B57D2 /* Pods_JLFloatingPanel_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 20A8EA7072F50BD2DA2C17BD25DAA296 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71C8773C39F15F95D3CFFF66E112B929 /* JLFloatingPanel */,
+				CFE36FA66DF4FED1A8563B822C586467 /* Pods-JLFloatingPanel_Example */,
+				A77F3376E0932C1079F5FD21E56C01D4 /* Pods-JLFloatingPanel_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09199C8F4492B04B952FCED32D36FBFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6972A6E2404D55C4F9FE5007D948B2E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF9AADE48EF2977074EFD978C5342897 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83E91AB419A344141A20DB7526614298 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E66951C7DBC28F988A3BE934511E7249 /* Pods-JLFloatingPanel_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A76BB9345E4C4A8A970E8590404C1D7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF1317ABB81612DC336A7951EE8D8B35 /* JLFloatingPanel-dummy.m in Sources */,
+				5621FA9C25B60E8FBAA24D70557E2E88 /* JLFloatingPanelBackdropView.m in Sources */,
+				EFA88C44A546902BFDC8CFD6F4A9AA6C /* JLFloatingPanelBehavior.m in Sources */,
+				940477187AFCF91F9CCB673D70F0618C /* JLFloatingPanelController.m in Sources */,
+				5CDCFC328DA3A4541531A8EE2B0D8B14 /* JLFloatingPanelCore.m in Sources */,
+				EE77A398603F95E571CCAC065DAA25CA /* JLFloatingPanelLayout.m in Sources */,
+				1264554D0B3D277E076EB62AC632A6D9 /* JLFloatingPanelPassThroughView.m in Sources */,
+				C6896EBC86A940340809EEC251B052F1 /* JLFloatingPanelPosition.m in Sources */,
+				9D5E27469F48EE2DADDA302FCD6665C1 /* JLFloatingPanelSurfaceView.m in Sources */,
+				7E1A9EB5E1488E6A2274B788E077D82F /* JLFloatingPanelTransitioning.m in Sources */,
+				8BB48A7C8EDAD24E562FE8B8444A1413 /* JLGrabberHandleView.m in Sources */,
+				1DBA55E23DE4A61684E06359B960255E /* UIVIewExtension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEC8730E6D3DC12F9C6303AF9D84D6FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF2487E25AE2F879CF2942F8D6DE6AE5 /* Pods-JLFloatingPanel_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C3F43973A8D8D9FA053DBC5E0ED42756 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-JLFloatingPanel_Example";
+			target = CFE36FA66DF4FED1A8563B822C586467 /* Pods-JLFloatingPanel_Example */;
+			targetProxy = C549D2DAC80301040278E2831755F539 /* PBXContainerItemProxy */;
+		};
+		F0F1CC8BB8BA66B9626D8F955BD3FBC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JLFloatingPanel;
+			target = 71C8773C39F15F95D3CFFF66E112B929 /* JLFloatingPanel */;
+			targetProxy = 4D09DE0991BBAD4AF6131371BFEB0556 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0C60B38CD020108ED4E265B6B19CEC1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2128CDB835BAFD6EF41B7470C2D5EC8 /* Pods-JLFloatingPanel_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-JLFloatingPanel_Tests/Pods-JLFloatingPanel_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JLFloatingPanel_Tests/Pods-JLFloatingPanel_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		181499ACCD9458DEC168A64EF96B4B92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DF4023A5FDBBE2A7BB4310CDD69BF22 /* Pods-JLFloatingPanel_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-JLFloatingPanel_Example/Pods-JLFloatingPanel_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JLFloatingPanel_Example/Pods-JLFloatingPanel_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		46B5B8B2D8E5D6280C42A4901E2B30EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5854C757171FDD0C7BD0DB87D4721B57 /* JLFloatingPanel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JLFloatingPanel/JLFloatingPanel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JLFloatingPanel/JLFloatingPanel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JLFloatingPanel/JLFloatingPanel.modulemap";
+				PRODUCT_MODULE_NAME = JLFloatingPanel;
+				PRODUCT_NAME = JLFloatingPanel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		58619E8E27EC73303F730890AAC57E1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 152B2B27612A8D73E01080A7EEC41332 /* Pods-JLFloatingPanel_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-JLFloatingPanel_Tests/Pods-JLFloatingPanel_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JLFloatingPanel_Tests/Pods-JLFloatingPanel_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		736DF25A06A287FEC295F8E136528D25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9509A5E0C825B55FA77B23C989151A84 /* Pods-JLFloatingPanel_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-JLFloatingPanel_Example/Pods-JLFloatingPanel_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JLFloatingPanel_Example/Pods-JLFloatingPanel_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		775EC311E4F3D484D405849D91B5EAFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5854C757171FDD0C7BD0DB87D4721B57 /* JLFloatingPanel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JLFloatingPanel/JLFloatingPanel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JLFloatingPanel/JLFloatingPanel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JLFloatingPanel/JLFloatingPanel.modulemap";
+				PRODUCT_MODULE_NAME = JLFloatingPanel;
+				PRODUCT_NAME = JLFloatingPanel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0D5B5E84DD089F8AAB6C67D35733F752 /* Build configuration list for PBXNativeTarget "Pods-JLFloatingPanel_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58619E8E27EC73303F730890AAC57E1E /* Debug */,
+				0C60B38CD020108ED4E265B6B19CEC1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF7227D9B20A1D549000096ACCB23D7 /* Debug */,
+				4BE66A09A74FD25164AAB3C2645B9B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72F2EC9966221770F808286CDB230586 /* Build configuration list for PBXNativeTarget "Pods-JLFloatingPanel_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				736DF25A06A287FEC295F8E136528D25 /* Debug */,
+				181499ACCD9458DEC168A64EF96B4B92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD0E1516B77B3B22AED889C31A47C651 /* Build configuration list for PBXNativeTarget "JLFloatingPanel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46B5B8B2D8E5D6280C42A4901E2B30EF /* Debug */,
+				775EC311E4F3D484D405849D91B5EAFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

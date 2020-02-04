@@ -1,0 +1,6 @@
+framework module JLFloatingPanel {
+  umbrella header "JLFloatingPanel-umbrella.h"
+
+  export *
+  module * { export * }
+}

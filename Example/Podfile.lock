@@ -1,0 +1,16 @@
+PODS:
+  - JLFloatingPanel (0.1.0)
+
+DEPENDENCIES:
+  - JLFloatingPanel (from `../`)
+
+EXTERNAL SOURCES:
+  JLFloatingPanel:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JLFloatingPanel: 5a71a3d975f97971df8e5d7f053d9e755362e562
+
+PODFILE CHECKSUM: f12bf82d9fab515c7f0b18536f2a2149361938e8
+
+COCOAPODS: 1.7.5

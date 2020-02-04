@@ -1,0 +1,22 @@
+{
+  "name": "JLFloatingPanel",
+  "version": "0.1.0",
+  "summary": "A short description of JLFloatingPanel.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Jacklin/JLFloatingPanel",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Jacklin": "xiaolinsun@sohu-inc.com"
+  },
+  "source": {
+    "git": "https://github.com/Jacklin/JLFloatingPanel.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "JLFloatingPanel/Classes/**/*"
+}
