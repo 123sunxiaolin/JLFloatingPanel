@@ -28,6 +28,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface JLFloatingPanelIntrinsicLayout: NSObject<JLFloatingPanelIntrinsicLayout>
+
+@end
+
 @class JLFloatingPanelController,
 JLFloatingPanelSurfaceView,
 JLFloatingPanelBackdropView;
@@ -35,7 +39,7 @@ JLFloatingPanelBackdropView;
 
 @interface JLFloatingPanelLayoutAdapter : NSObject
 
-@property (nonatomic, weak) id <JLFloatingPanelLayout> layout;
+@property (nonatomic, strong) id <JLFloatingPanelLayout> layout;
 @property (nonatomic, weak) JLFloatingPanelController *panelController;
 @property (nonatomic, assign, readonly) UIEdgeInsets adjustedContentInsets;
 

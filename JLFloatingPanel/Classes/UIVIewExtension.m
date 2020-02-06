@@ -60,7 +60,7 @@
 
 @end
 
-@implementation UIViewController (Extension)
+@implementation UIViewController (Property)
 
 - (UIEdgeInsets)layoutInsets {
     if (@available(iOS 11.0, *)) {
@@ -133,6 +133,22 @@
 
 - (BOOL)isLocked {
     return !self.showsVerticalScrollIndicator && !self.bounces && self.isDirectionalLockEnabled;
+}
+
+@end
+
+@implementation NSLayoutConstraint (Extension)
+
++ (void)activateConstraint:(NSLayoutConstraint *)constraint {
+    if (constraint) {
+        [self activateConstraints:@[constraint]];
+    }
+}
+
++ (void)deactivateConstraint:(NSLayoutConstraint *)constraint {
+    if (constraint) {
+        [self deactivateConstraints:@[constraint]];
+    }
 }
 
 @end

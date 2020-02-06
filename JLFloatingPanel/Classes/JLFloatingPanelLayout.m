@@ -51,39 +51,6 @@
 
 @end
 
-#pragma mark - Bridge IntrinsicLayout
-@interface JLFloatingPanelIntrinsicLayout: NSObject <JLFloatingPanelIntrinsicLayout>
-
-@end
-
-@implementation JLFloatingPanelIntrinsicLayout
-
-- (JLFloatingPanelPosition)initialPostion {
-    return JLFloatingPanelPositionFull;
-}
-
-- (CGFloat)topInteractionBuffer {
-    return 6.0;
-}
-
-- (CGFloat)bottomInteractionBuffer {
-    return 6.0;
-}
-
-- (NSSet<NSNumber *> *)supportedPositions {
-    return [NSSet setWithArray:@[@(JLFloatingPanelPositionFull)]];
-}
-
-- (CGFloat)insetForPosition:(JLFloatingPanelPosition)position {
-    return CGFLOAT_MIN;
-}
-            
-- (JLFloatingPanelLayoutReference)positionReference {
-    return JLFloatingPanelLayoutReferenceFromSafeArea;
-}
-
-@end
-
 #pragma mark - Bridge Default
 @interface JLFloatingPanelLayout : NSObject <JLFloatingPanelLayout>
 
@@ -203,6 +170,54 @@
 
 @end
 
+#pragma mark - IntrinsicLayout
+@interface JLFloatingPanelIntrinsicLayout()
+@property (nonatomic, strong) JLFloatingPanelLayout *layout;
+@end
+
+@implementation JLFloatingPanelIntrinsicLayout
+
+- (instancetype)init {
+    if (self = [super init]) {
+        self.layout = [[JLFloatingPanelLayout alloc] init];
+    }
+    return self;
+}
+
+- (JLFloatingPanelPosition)initialPostion {
+    return JLFloatingPanelPositionFull;
+}
+
+- (CGFloat)topInteractionBuffer {
+    return 6.0;
+}
+
+- (CGFloat)bottomInteractionBuffer {
+    return 6.0;
+}
+
+- (NSSet<NSNumber *> *)supportedPositions {
+    return [NSSet setWithArray:@[@(JLFloatingPanelPositionFull)]];
+}
+
+- (CGFloat)insetForPosition:(JLFloatingPanelPosition)position {
+    return CGFLOAT_MIN;
+}
+            
+- (JLFloatingPanelLayoutReference)positionReference {
+    return JLFloatingPanelLayoutReferenceFromSafeArea;
+}
+
+- (NSArray<NSLayoutConstraint *> *)prepareLayoutWithSurfaceView:(UIView *)surfaceView inView:(UIView *)view {
+    return [self.layout prepareLayoutWithSurfaceView:surfaceView inView:view];
+}
+
+- (CGFloat)backdropAlphaForPosition:(JLFloatingPanelPosition)position {
+    return [self.layout backdropAlphaForPosition:position];
+}
+
+@end
+
 #pragma mark - LandscapeLayout
 @interface JLFloatingPanelDefaultLandscapeLayout()
 @property (nonatomic, strong) JLFloatingPanelLayout *layout;
@@ -262,7 +277,7 @@
 @property (nonatomic, weak) JLFloatingPanelSurfaceView *surfaceView;
 @property (nonatomic, weak) JLFloatingPanelBackdropView *backdropView;
 
-@property (nonatomic, assign) UIEdgeInsets safeAreaInsets;
+@property (nonatomic, assign, readonly) UIEdgeInsets safeAreaInsets;
 
 @property (nonatomic, assign) CGFloat heightBuffer;
 @property (nonatomic, assign) CGFloat initialConst;
@@ -309,10 +324,14 @@
     [constraints addObjectsFromArray:self.halfConstraints];
     [constraints addObjectsFromArray:self.tipConstraints];
     [constraints addObjectsFromArray:self.offConstraints];
-    [NSLayoutConstraint deactivateConstraints:constraints];
-    
-    [NSLayoutConstraint deactivateConstraints:@[self.heightConstraint, self.bottomConstraint]];
+    if (constraints.count) {
+        [NSLayoutConstraint deactivateConstraints:constraints];
+    }
+   
+    [NSLayoutConstraint deactivateConstraint:self.heightConstraint];
     self.heightConstraint = nil;
+    
+    [NSLayoutConstraint deactivateConstraint:self.bottomConstraint];
     self.bottomConstraint = nil;
     
     self.surfaceView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -349,6 +368,17 @@
                                                               attribute:NSLayoutAttributeBottom
                                                              multiplier:1
                                                                constant:0];
+    if (@available(iOS 9.0, *)) {
+        top = [self.backdropView.topAnchor constraintEqualToAnchor:panelController.view.topAnchor
+                                                          constant:0];
+        left = [self.backdropView.leftAnchor constraintEqualToAnchor:panelController.view.leftAnchor
+                                                            constant:0];
+        right = [self.backdropView.rightAnchor constraintEqualToAnchor:panelController.view.rightAnchor
+                                                              constant:0];
+        bottom = [self.backdropView.bottomAnchor constraintEqualToAnchor:panelController.view.bottomAnchor
+                                                                constant:0];
+    }
+    
     NSMutableArray *backgroundContrints = @[top, left, right, bottom].mutableCopy;
     [backgroundContrints addObjectsFromArray:surfaceContraints];
     self.fixedConstraints = backgroundContrints;
@@ -360,11 +390,15 @@
                                                                 toItem:panelController.view
                                                              attribute:NSLayoutAttributeBottom
                                                             multiplier:1 constant:0];
+        if (@available(iOS 9.0, *)) {
+            self.bottomConstraint = [self.surfaceView.bottomAnchor constraintEqualToAnchor:panelController.view.bottomAnchor
+                                                                                  constant:0];
+        }
     }
     
     // ---------------------Top-------------------------------
     // Flexible surface constraints for full, half, tip and off
-    NSLayoutConstraint *oneContraintFotFull = [NSLayoutConstraint constraintWithItem:self.surfaceView
+    NSLayoutConstraint *oneContraintForFull = [NSLayoutConstraint constraintWithItem:self.surfaceView
                                                                            attribute:NSLayoutAttributeTop
                                                                            relatedBy:NSLayoutRelationEqual
                                                                               toItem:panelController.view
@@ -378,7 +412,7 @@
         } else {
             topAnchor = panelController.layoutGuide.topAnchor;
         }
-        oneContraintFotFull = [self.surfaceView.topAnchor constraintEqualToAnchor:topAnchor constant:0];
+        oneContraintForFull = [self.surfaceView.topAnchor constraintEqualToAnchor:topAnchor constant:0];
     }
     
     [self.fullConstraints removeAllObjects];
@@ -387,25 +421,25 @@
     if ([self.layout conformsToProtocol:@protocol(JLFloatingPanelIntrinsicLayout)]) {
         // Set up on updateHeight()
     } else {
-        [self.fullConstraints addObject:oneContraintFotFull];
+        [self.fullConstraints addObject:oneContraintForFull];
     }
     
     // ---------------------Bottom-------------------------------
-    NSLayoutConstraint *oneContraintFotHalf = [NSLayoutConstraint constraintWithItem:self.surfaceView
+    NSLayoutConstraint *oneContraintForHalf = [NSLayoutConstraint constraintWithItem:self.surfaceView
                                                                             attribute:NSLayoutAttributeTop
                                                                             relatedBy:NSLayoutRelationEqual
                                                                                toItem:panelController.view
                                                                             attribute:NSLayoutAttributeBottom
                                                                            multiplier:1
                                                                              constant:-self.halfInset];
-    NSLayoutConstraint *oneContraintFotTip = [NSLayoutConstraint constraintWithItem:self.surfaceView
+    NSLayoutConstraint *oneContraintForTip = [NSLayoutConstraint constraintWithItem:self.surfaceView
                                                                           attribute:NSLayoutAttributeTop
                                                                           relatedBy:NSLayoutRelationEqual
                                                                              toItem:panelController.view
                                                                           attribute:NSLayoutAttributeBottom
                                                                          multiplier:1
                                                                            constant:-self.tipInset];
-    NSLayoutConstraint *oneContraintFotHidden = [NSLayoutConstraint constraintWithItem:self.surfaceView
+    NSLayoutConstraint *oneContraintForHidden = [NSLayoutConstraint constraintWithItem:self.surfaceView
                                                                              attribute:NSLayoutAttributeTop
                                                                              relatedBy:NSLayoutRelationEqual
                                                                                 toItem:panelController.view
@@ -420,23 +454,22 @@
         } else {
             bottomAnchor = panelController.layoutGuide.bottomAnchor;
         }
-        oneContraintFotHalf = [self.surfaceView.topAnchor constraintEqualToAnchor:bottomAnchor
+        oneContraintForHalf = [self.surfaceView.topAnchor constraintEqualToAnchor:bottomAnchor
                                                                          constant:-self.halfInset];
-        oneContraintFotTip = [self.surfaceView.topAnchor constraintEqualToAnchor:bottomAnchor
+        oneContraintForTip = [self.surfaceView.topAnchor constraintEqualToAnchor:bottomAnchor
                                                                         constant:-self.tipInset];
-        oneContraintFotHidden = [self.surfaceView.topAnchor constraintEqualToAnchor:bottomAnchor
+        oneContraintForHidden = [self.surfaceView.topAnchor constraintEqualToAnchor:bottomAnchor
                                                                            constant:-self.hiddenInset];
     }
     
     [self.halfConstraints removeAllObjects];
-    [self.halfConstraints addObject:oneContraintFotFull];
+    [self.halfConstraints addObject:oneContraintForFull];
     
     [self.tipConstraints removeAllObjects];
-    [self.tipConstraints addObject:oneContraintFotTip];
+    [self.tipConstraints addObject:oneContraintForTip];
     
     [self.offConstraints removeAllObjects];
-    [self.offConstraints addObject:oneContraintFotHidden];
-    
+    [self.offConstraints addObject:oneContraintForHidden];
 }
 
 - (void)startInteractionWithState:(JLFloatingPanelPosition)position {
@@ -444,18 +477,17 @@
 }
 
 - (void)startInteractionWithState:(JLFloatingPanelPosition)position offSet:(CGPoint)offset {
-    if (self.interactiveTopConstraint) {
-        return;
-    }
+    if (self.interactiveTopConstraint)  return;
     [self.fullConstraints addObjectsFromArray:self.halfConstraints];
     [self.fullConstraints addObjectsFromArray:self.tipConstraints];
     [self.fullConstraints addObjectsFromArray:self.offConstraints];
+    [NSLayoutConstraint deactivateConstraints:self.fullConstraints];
     
     NSLayoutConstraint *interactiveTopConstraint = nil;
     switch (self.layout.positionReference) {
         case JLFloatingPanelLayoutReferenceFromSafeArea:
             self.initialConst = self.surfaceView.frame.origin.y - self.safeAreaInsets.top + offset.y;
-            if (@available(iOS 11.0, *)) {
+            if (@available(iOS 9.0, *)) {
                 interactiveTopConstraint = [self.surfaceView.topAnchor constraintEqualToAnchor:self.panelController.layoutGuide.topAnchor
                                                                                       constant:self.initialConst];
             } else {
@@ -470,9 +502,9 @@
             break;
             
         case JLFloatingPanelLayoutReferenceFromSuperview:
-            self.initialConst = self.surfaceView.frame.origin.y - self.safeAreaInsets.top + offset.y;
-            if (@available(iOS 11.0, *)) {
-                interactiveTopConstraint = [self.surfaceView.topAnchor constraintEqualToAnchor:self.panelController.layoutGuide.topAnchor
+            self.initialConst = self.surfaceView.frame.origin.y + offset.y;
+            if (@available(iOS 9.0, *)) {
+                interactiveTopConstraint = [self.surfaceView.topAnchor constraintEqualToAnchor:self.panelController.view.topAnchor
                                                                                       constant:self.initialConst];
             } else {
                 interactiveTopConstraint = [NSLayoutConstraint constraintWithItem:self.surfaceView
@@ -506,7 +538,7 @@
 // It must be called in FloatingPanelController.traitCollectionDidChange(_:)
 - (void)updateHeight {
     if (!self.panelController) return;
-    [NSLayoutConstraint deactivateConstraints:@[self.heightConstraint]];
+    [NSLayoutConstraint deactivateConstraint:self.heightConstraint];
     self.heightConstraint = nil;
     
     if ([self.layout conformsToProtocol:@protocol(JLFloatingPanelIntrinsicLayout)]) {
@@ -586,7 +618,7 @@
 
 - (void)activateLayoutWithPosition:(JLFloatingPanelPosition)position {
     [self activateFixedLayout];
-    [self activateLayoutWithPosition:position];
+    [self activateInteractiveLayoutWithPosition:position];
 }
 
 - (void)activateInteractiveLayoutWithPosition:(JLFloatingPanelPosition)position {
@@ -726,12 +758,11 @@
     self.initialConst = 0;
     self.intrinsicHeight = 0;
     self.fixedConstraints = [NSMutableArray new];
+    self.fullConstraints = [NSMutableArray new];
     self.halfConstraints = [NSMutableArray new];
     self.tipConstraints = [NSMutableArray new];
     self.offConstraints = [NSMutableArray new];
    
-    
-    
 }
 
 - (void)checkLayoutConsistance {
@@ -794,7 +825,7 @@
                                                                attribute:NSLayoutAttributeBottom
                                                               multiplier:1
                                                                 constant:- self.fullInset];
-        if (@available(iOS 11.0, *)) {
+        if (@available(iOS 9.0, *)) {
             top = [self.surfaceView.topAnchor constraintEqualToAnchor:self.panelController.layoutGuide.bottomAnchor
                                                              constant:- self.fullInset];
         }
@@ -818,10 +849,13 @@
 }
 
 - (void)activateFixedLayout {
-    [NSLayoutConstraint deactivateConstraints:@[self.interactiveTopConstraint]];
+    
+    [NSLayoutConstraint deactivateConstraint:self.interactiveTopConstraint];
     self.interactiveTopConstraint = nil;
     
-    [NSLayoutConstraint activateConstraints:self.fixedConstraints];
+    if (self.fixedConstraints.count) {
+        [NSLayoutConstraint activateConstraints:self.fixedConstraints];
+    }
     if (self.panelController.contentMode == JLContentModeFitToBounds) {
         [NSLayoutConstraint activateConstraints:@[self.bottomConstraint]];
     }
@@ -842,6 +876,10 @@
 }
 
 #pragma mark - Getters
+- (UIEdgeInsets)safeAreaInsets {
+    return self.panelController.layoutInsets;
+}
+
 - (CGFloat )fullInset {
     if ([self.layout conformsToProtocol:@protocol(JLFloatingPanelIntrinsicLayout)]) {
         return self.intrinsicHeight;
@@ -850,15 +888,18 @@
 }
 
 - (CGFloat)halfInset {
-    return [self.layout insetForPosition:JLFloatingPanelPositionHalf];
+    CGFloat inset = [self.layout insetForPosition:JLFloatingPanelPositionHalf];
+    return inset == CGFLOAT_MIN ? 0 : inset;
 }
 
 - (CGFloat)tipInset {
-    return [self.layout insetForPosition:JLFloatingPanelPositionTip];
+    CGFloat inset = [self.layout insetForPosition:JLFloatingPanelPositionTip];
+    return inset == CGFLOAT_MIN ? 0 : inset;
 }
 
 - (CGFloat)hiddenInset {
-    return [self.layout insetForPosition:JLFloatingPanelPositionHidden];
+    CGFloat inset = [self.layout insetForPosition:JLFloatingPanelPositionHidden];
+    return inset == CGFLOAT_MIN ? 0 : inset;
 }
 
 - (NSSet<NSNumber *> *)supportedPositions {

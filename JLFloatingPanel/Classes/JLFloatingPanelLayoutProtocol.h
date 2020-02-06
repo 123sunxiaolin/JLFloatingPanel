@@ -55,7 +55,7 @@ typedef NS_ENUM(NSInteger, JLFloatingPanelLayoutReference) {
 /// Returns a CGFloat value to determine the backdrop view's alpha for a position.
 ///
 /// Default is 0.3 at full position, otherwise 0.0.
-- (CGFloat)backdropAlphaForPosition:(JLFloatingPanelPosition)potision;
+- (CGFloat)backdropAlphaForPosition:(JLFloatingPanelPosition)position;
 @end
 
 /// FloatingPanelFullScreenLayout

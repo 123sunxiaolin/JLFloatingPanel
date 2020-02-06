@@ -24,6 +24,9 @@
 /// Capture the latest one
 @property (nonatomic, assign) UIEdgeInsets preSafeAreaInsets;
 
+/// record the observer safeAreaInsets
+@property (nonatomic, assign) UIEdgeInsets observerOldSafeAreaInsets;
+
 @property (nonatomic, strong) JLFloatingPanelModalTransition *modalTransition;
 
 @end
@@ -56,7 +59,7 @@
     [super viewWillDisappear:animated];
     
     // Remove KVO
-    [self removeObserver:self.view forKeyPath:@"safeAreaInsets"];
+    //[self removeObserver:self.view forKeyPath:@"safeAreaInsets"];
 }
 
 - (void)loadView {
@@ -72,6 +75,12 @@
     [view addSubview:self.surfaceView];
     
     self.view = view;
+    
+    if (@available(iOS 11.0, *)) {
+        self.observerOldSafeAreaInsets = self.view.safeAreaInsets;
+    } else {
+        // Fallback on earlier versions
+    }
 }
 
 - (void)viewDidLayoutSubviews {
@@ -138,7 +147,7 @@
     [self reloadLayoutForTraitCollection:self.traitCollection];
     [self activateLayout];
     
-    if (@available(iOS 11.0, *)) {
+   /* if (@available(iOS 11.0, *)) {
         // Must track the safeAreaInsets of `self.view` to update the layout.
         // There are 2 reasons.
         // 1. This or the parent VC doesn't call viewSafeAreaInsetsDidChange() on the bottom
@@ -152,7 +161,7 @@
     } else {
         // KVOs for topLayoutGuide & bottomLayoutGuide are not effective.
         // Instead, update(safeAreaInsets:) is called at `viewDidLayoutSubviews()`
-    }
+    } */
     
     [self moveToPosition:self.floatingPanel.layoutAdapter.layout.initialPostion
                 animated:animated
@@ -293,6 +302,15 @@
     }
 }
 
+- (void)viewSafeAreaInsetsDidChange {
+    [super viewSafeAreaInsetsDidChange];
+    if (!UIEdgeInsetsEqualToEdgeInsets(self.view.safeAreaInsets, self.observerOldSafeAreaInsets)) {
+        [self updateSafeAreaInsets:self.layoutInsets];
+    }
+    self.observerOldSafeAreaInsets = self.view.safeAreaInsets;
+    
+}
+
 #pragma mark - Private
 - (void)setUp {
     [self dismissSwizzling];
@@ -419,7 +437,7 @@
 }
 
 - (void)setContentViewController:(UIViewController *)contentViewController {
-    [self setContentViewController:contentViewController];
+    [self setContentVC:contentViewController];
 }
 
 #pragma mark - Getters

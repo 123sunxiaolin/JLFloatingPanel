@@ -24,6 +24,9 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		A9255ECCFFC6D6175EF04969 /* Pods_JLFloatingPanel_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CE0ADBB8133AD2B84FC40A /* Pods_JLFloatingPanel_Example.framework */; };
+		E711191323E9503C00D7F018 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E711191223E9503C00D7F018 /* UIViewController+Extension.m */; };
+		E711191623E9506C00D7F018 /* JLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E711191523E9506C00D7F018 /* JLBaseViewController.m */; };
+		E711191923E955D900D7F018 /* JLSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E711191823E955D900D7F018 /* JLSettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,13 +63,19 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		61B226249A617D84F8AFF416 /* Pods-JLFloatingPanel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLFloatingPanel_Tests.debug.xcconfig"; path = "Target Support Files/Pods-JLFloatingPanel_Tests/Pods-JLFloatingPanel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		66524B333BB27B5F45E8EA7A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		66524B333BB27B5F45E8EA7A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91CE0ADBB8133AD2B84FC40A /* Pods_JLFloatingPanel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JLFloatingPanel_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA8569A39D931E598FADD9EE /* JLFloatingPanel.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = JLFloatingPanel.podspec; path = ../JLFloatingPanel.podspec; sourceTree = "<group>"; };
+		AA8569A39D931E598FADD9EE /* JLFloatingPanel.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JLFloatingPanel.podspec; path = ../JLFloatingPanel.podspec; sourceTree = "<group>"; };
 		AEC2D23D85E1A1DAC304A390 /* Pods-JLFloatingPanel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLFloatingPanel_Example.release.xcconfig"; path = "Target Support Files/Pods-JLFloatingPanel_Example/Pods-JLFloatingPanel_Example.release.xcconfig"; sourceTree = "<group>"; };
-		C451368D6CC06080A6DF739E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C451368D6CC06080A6DF739E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E711191123E9503C00D7F018 /* UIViewController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
+		E711191223E9503C00D7F018 /* UIViewController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
+		E711191423E9506C00D7F018 /* JLBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLBaseViewController.h; sourceTree = "<group>"; };
+		E711191523E9506C00D7F018 /* JLBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLBaseViewController.m; sourceTree = "<group>"; };
+		E711191723E955D900D7F018 /* JLSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLSettingViewController.h; sourceTree = "<group>"; };
+		E711191823E955D900D7F018 /* JLSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLSettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,11 +141,16 @@
 		6003F593195388D20070C39A /* Example for JLFloatingPanel */ = {
 			isa = PBXGroup;
 			children = (
+				E711191423E9506C00D7F018 /* JLBaseViewController.h */,
+				E711191523E9506C00D7F018 /* JLBaseViewController.m */,
 				6003F59C195388D20070C39A /* JLAppDelegate.h */,
 				6003F59D195388D20070C39A /* JLAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* JLViewController.h */,
 				6003F5A6195388D20070C39A /* JLViewController.m */,
+				E711191723E955D900D7F018 /* JLSettingViewController.h */,
+				E711191823E955D900D7F018 /* JLSettingViewController.m */,
+				E711191023E9501D00D7F018 /* Extension */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -193,8 +207,16 @@
 				61B226249A617D84F8AFF416 /* Pods-JLFloatingPanel_Tests.debug.xcconfig */,
 				1BBB5415860ECD1E7C84F2C3 /* Pods-JLFloatingPanel_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E711191023E9501D00D7F018 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E711191123E9503C00D7F018 /* UIViewController+Extension.h */,
+				E711191223E9503C00D7F018 /* UIViewController+Extension.m */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +280,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -364,9 +387,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E711191323E9503C00D7F018 /* UIViewController+Extension.m in Sources */,
+				E711191623E9506C00D7F018 /* JLBaseViewController.m in Sources */,
 				6003F59E195388D20070C39A /* JLAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* JLViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				E711191923E955D900D7F018 /* JLSettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +523,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JLFloatingPanel/JLFloatingPanel-Prefix.pch";
 				INFOPLIST_FILE = "JLFloatingPanel/JLFloatingPanel-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -513,6 +540,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JLFloatingPanel/JLFloatingPanel-Prefix.pch";
 				INFOPLIST_FILE = "JLFloatingPanel/JLFloatingPanel-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

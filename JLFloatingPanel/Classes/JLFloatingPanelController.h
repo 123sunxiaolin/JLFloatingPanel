@@ -133,7 +133,7 @@ typedef NS_ENUM(NSInteger, JLContentMode) {
 ///     - parent: A parent view controller object that displays FloatingPanelController's view. A container view controller object isn't applicable.
 ///     - belowView: Insert the surface view managed by the controller below the specified view. By default, the surface view will be added to the end of the parent list of subviews.
 ///     - animated: Pass true to animate the presentation; otherwise, pass false.
-- (void)addPanelToParentViewController:(UIViewController *)parent belowView:(UIView *)belowView animated:(BOOL)animated;
+- (void)addPanelToParentViewController:(UIViewController *)parent belowView:(UIView * __nullable)belowView animated:(BOOL)animated;
 
 /// Removes the controller and the managed view from its parent view controller
 /// - Parameters:

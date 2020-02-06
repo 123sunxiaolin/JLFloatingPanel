@@ -61,6 +61,10 @@ static CGFloat const kVelocityThreshold = 8.f;
     return [[UIViewPropertyAnimator alloc] initWithDuration:0 timingParameters:timing];
 }
 
+- (BOOL)allowsRubberBandingWithRectEdge:(UIRectEdge)edge {
+    return NO;
+}
+
 #pragma mark - Private
 - (id <UITimingCurveProvider>)timeingCurveWithVelocity:(CGVector)velocity {
     CGFloat damping = [self getDampingWithVelocity:velocity];

@@ -626,8 +626,12 @@
         CGVector velocityVector = (distance != 0) ? CGVectorMake(0, MIN(velocity.y/distance, self.behavior.removalVelocity)) : CGVectorMake(0, 0);
         // `velocityVector` will be replaced by just a velocity(not vector) when FloatingPanelRemovalInteraction will be added.
         if (self.viewcontroller && [self shouldStartRemovalAnimationWithVelocityVector:velocityVector]) {
-            [self.viewcontroller.delegate floatingPanelDidEndDraggingToRemoveWithFpc:self.viewcontroller
-                                                                            velocity:velocity];
+           
+            if (self.viewcontroller.delegate && [self.viewcontroller.delegate respondsToSelector:@selector(floatingPanelDidEndDraggingToRemoveWithFpc:velocity:)]) {
+                [self.viewcontroller.delegate floatingPanelDidEndDraggingToRemoveWithFpc:self.viewcontroller
+                velocity:velocity];
+            }
+            
             CGVector animationVector = CGVectorMake(fabs(velocityVector.dx), fabs(velocityVector.dy));
             __weak typeof(self) weakSelf = self;
             [self startRemovalAnimationWithVC:self.viewcontroller velocityVector:animationVector completion:^{

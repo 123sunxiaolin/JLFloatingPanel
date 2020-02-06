@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JLLayoutGuide : NSObject<JLLayoutGuideProvider>
 
-- (instancetype)initWithTop:(id)top bottom:(id)bottom;
+- (instancetype)initWithTop:(id __nullable)top bottom:(id __nullable)bottom;
 
 @end
 
@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface UIViewController (Extension)
+@interface UIViewController (Property)
 
 - (UIEdgeInsets)layoutInsets;
 - (JLLayoutGuide *)layoutGuide;
@@ -65,6 +65,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (CGPoint)contentOffsetZero;
 - (BOOL)isLocked;
+
+@end
+
+@interface NSLayoutConstraint (Extension)
+
++ (void)activateConstraint:(NSLayoutConstraint *)constraint;
++ (void)deactivateConstraint:(NSLayoutConstraint *)constraint;
 
 @end
 

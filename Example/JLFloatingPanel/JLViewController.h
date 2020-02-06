@@ -7,7 +7,8 @@
 //
 
 @import UIKit;
+#import "JLBaseViewController.h"
 
-@interface JLViewController : UIViewController
+@interface JLViewController : JLBaseViewController
 
 @end
