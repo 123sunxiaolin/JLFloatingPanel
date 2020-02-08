@@ -23,6 +23,16 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@">>> Content View: viewWillAppear");
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    NSLog(@">>> Content View: viewWillDisappear");
+}
+
 #pragma mark - UIStoryBoardDelegate
 - (NSString *)storyboardName {
     return @"Main";

@@ -52,7 +52,7 @@
     UIViewController *vc = [[UIViewController alloc] init];
     vc.view.backgroundColor = [UIColor redColor];
     // Set a content view controller
-    [self.settingPanelVC setContentViewController:vc];
+    [self.settingPanelVC setContentViewController:contentVC];
     
     //  Add FloatingPanel to self.view
     [self.settingPanelVC addPanelToParentViewController:self
@@ -62,7 +62,7 @@
 }
 
 - (void)handleBackdropWithTapGesture:(UITapGestureRecognizer *)tapGesture {
-    if (tapGesture.view == self.settingPanelVC.view) {
+    if (tapGesture.view == self.settingPanelVC.backdropView) {
         [self.settingPanelVC removePanelFromParentWithAnimated:YES completion:nil];
         self.settingPanelVC = nil;
     }

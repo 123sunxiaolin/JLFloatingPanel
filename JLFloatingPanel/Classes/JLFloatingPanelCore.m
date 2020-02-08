@@ -584,6 +584,7 @@
     CGFloat preY = self.surfaceView.frame.origin.y;
     CGFloat dy = translation.y - self.initialTranslationY;
 
+    NSLog(@"dy --------:%f", dy);
     [self.layoutAdapter updateInteractiveTopConstraintWithDiff:dy
                                                allowsTopBuffer:[self allowsTopBufferForTranslationY:dy]
                                                       behavior:self.behavior];
@@ -683,7 +684,7 @@
     
     self.initialFrame = self.surfaceView.frame;
     if (self.state == self.layoutAdapter.topMostState && self.scrollView) {
-        if (CGRectContainsPoint(self.grabberAreaFrame, location)) {
+        if (CGRectContainsPoint(self.grabberAreaFrame, location) || !self.scrollView.isTracking) {
             self.initialScrollOffset = self.scrollView.contentOffset;
         } else {
             self.initialScrollOffset = self.scrollView.contentOffsetZero;
@@ -883,7 +884,7 @@
         }
         
     } else if (self.panGestureRecognizer == panGesture) {
-        CGPoint translation = [panGesture translationInView:panGesture.view.superview];
+        CGPoint translation = [panGesture translationInView:self.panGestureRecognizer.view.superview];
         CGPoint location = [panGesture locationInView:panGesture.view];
         
         if (!self.interactionInProgress
@@ -905,11 +906,8 @@
                         rect.origin.y = self.layoutAdapter.topY;
                         self.surfaceView.frame = rect;
                     }
-                    if (@available(iOS 10.0, *)) {
-                        [self.animator finishAnimationAtPosition:UIViewAnimatingPositionCurrent];
-                    } else {
-                        // Fallback on earlier versions
-                    }
+                    
+                    [self.animator finishAnimationAtPosition:UIViewAnimatingPositionCurrent];
                 } else {
                     self.animator = nil;
                 }

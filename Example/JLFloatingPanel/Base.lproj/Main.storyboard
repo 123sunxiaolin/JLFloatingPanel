@@ -75,22 +75,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dRI-Mg-iCe">
-                                <rect key="frame" x="32" y="16" width="311" height="181"/>
+                                <rect key="frame" x="10" y="16" width="355" height="181"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version: 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwH-J1-KCi">
-                                        <rect key="frame" x="118.5" y="0.0" width="74.5" height="21"/>
+                                        <rect key="frame" x="140.5" y="0.0" width="74.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UINavigationBar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnY-rc-Lur">
-                                        <rect key="frame" x="90.5" y="37" width="130" height="25"/>
+                                        <rect key="frame" x="112.5" y="37" width="130" height="25"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="126" translatesAutoresizingMaskIntoConstraints="NO" id="c2r-VE-DWA">
-                                        <rect key="frame" x="23.5" y="78" width="264.5" height="38"/>
+                                        <rect key="frame" x="45.5" y="78" width="264.5" height="38"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Large Titles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIe-iQ-LUy">
                                                 <rect key="frame" x="0.0" y="9" width="89.5" height="20.5"/>
@@ -107,7 +107,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="126" translatesAutoresizingMaskIntoConstraints="NO" id="NuF-DJ-Yxv">
-                                        <rect key="frame" x="23.5" y="132" width="264.5" height="49"/>
+                                        <rect key="frame" x="45.5" y="132" width="264.5" height="49"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translucent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWJ-bg-bid">
                                                 <rect key="frame" x="0.0" y="0.0" width="89.5" height="49"/>
@@ -129,9 +129,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dRI-Mg-iCe" firstAttribute="leading" secondItem="dOh-Fm-oX1" secondAttribute="leading" constant="32" id="OTH-ey-smY"/>
+                            <constraint firstItem="dRI-Mg-iCe" firstAttribute="leading" secondItem="dOh-Fm-oX1" secondAttribute="leading" constant="10" id="OTH-ey-smY"/>
                             <constraint firstItem="dRI-Mg-iCe" firstAttribute="top" secondItem="dOh-Fm-oX1" secondAttribute="topMargin" constant="16" id="lPf-Jq-w5x"/>
-                            <constraint firstAttribute="trailing" secondItem="dRI-Mg-iCe" secondAttribute="trailing" constant="32" id="ncT-c2-30a"/>
+                            <constraint firstAttribute="trailing" secondItem="dRI-Mg-iCe" secondAttribute="trailing" constant="10" id="ncT-c2-30a"/>
                             <constraint firstItem="h4u-Qq-SgP" firstAttribute="bottom" secondItem="dRI-Mg-iCe" secondAttribute="bottom" id="xoL-hc-b5I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h4u-Qq-SgP"/>
